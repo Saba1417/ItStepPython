@@ -20,7 +20,7 @@ class Student:
     def from_dict(cls, d: dict) -> "Student":
         return cls(name=d["name"], list_number=d["list_number"], grade=d["grade"])
 
-
+# determine desktop path; fallback to home if Desktop doesn't exist
 _desktop = Path.home() / "Desktop"
 if not _desktop.exists():
     _desktop = Path.home()
